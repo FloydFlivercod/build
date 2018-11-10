@@ -3207,9 +3207,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) \
 
 GZOSP_TARGET_PACKAGE := $(PRODUCT_OUT)/$(GZOSP_VERSION).zip
 
-.PHONY: otapackage gzosp
+.PHONY: otapackage FloydFlivercod
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-gzosp: otapackage
+FloydFlivercod: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(GZOSP_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(GZOSP_TARGET_PACKAGE) > $(GZOSP_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_RED}""${CL_RED}
